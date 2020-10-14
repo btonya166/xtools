@@ -1,7 +1,0 @@
-#!/bin/sh
-# xsrc PKG - list source files for XBPS template
-
-XBPS_DISTDIR=$(xdistdir)
-"$XBPS_DISTDIR/xbps-src" show "$1" | sed -n '/^distfiles:/s/[^:]*:[\t]*//p'
-find $XBPS_DISTDIR/srcpkgs/$1/files -type f 2>/dev/null
-find $XBPS_DISTDIR/srcpkgs/$1/patches -type f 2>/dev/null
